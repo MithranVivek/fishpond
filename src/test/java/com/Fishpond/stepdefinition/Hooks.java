@@ -1,5 +1,12 @@
 package com.Fishpond.stepdefinition;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
 import com.Fishpond.resources.CommonActions;
 
 import cucumber.api.java.After;
@@ -15,7 +22,11 @@ public class Hooks extends CommonActions{
 	}
 	
 	@After
-	public void afterScenario() {
+	public void afterScenario() throws IOException {
+		TakesScreenshot tk = (TakesScreenshot)driver;
+		File loc = new File("C:\\Users\\Windows\\eclipse-vivek\\Fishpond\\target");
+		File scr = tk.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(loc, scr);
 		driver.quit();
 	}
 
