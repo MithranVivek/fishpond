@@ -27,6 +27,7 @@ public class Hooks extends CommonActions{
 		File loc = new File("C:\\Users\\Windows\\eclipse-vivek\\Fishpond\\target");
 		File scr = tk.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(loc, scr);
+		c.impliciWait();
 		driver.quit();
 	}
 
