@@ -1,0 +1,5 @@
+com\Fishpond\objectrepository\ElectronicsPage.class
+com\Fishpond\resources\CommonActions.class
+com\Fishpond\stepdefinition\Electonics.class
+com\Fishpond\stepdefinition\TestRunner.class
+com\Fishpond\stepdefinition\Hooks.class
